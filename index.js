@@ -4,7 +4,7 @@ var through2 = require('through2');
 module.exports = function(options) {
   return through2.obj( function ( file, enc, callback ) {
     var rootPX = ( options && options.rootPX ) || 75;
-    var accuracy = (options && options.accuracy) || 0;
+    var accuracy = (options && options.accuracy) || 2;
     if( file.isNull() ) {
       return callback( null, file );
     }
