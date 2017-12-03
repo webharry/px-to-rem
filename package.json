@@ -1,6 +1,6 @@
 {
-  "name": "px-to-rem",
-  "version": "1.0.0",
+  "name": "gulp-px-to-rem",
+  "version": "1.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {

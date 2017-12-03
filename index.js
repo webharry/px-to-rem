@@ -4,6 +4,7 @@ var through2 = require('through2');
 module.exports = function(options) {
   return through2.obj( function ( file, enc, callback ) {
     var rootPX = ( options && options.rootPX ) || 75;
+    var accuracy = (option && options.accuracy) || 0;
     if( file.isNull() ) {
       return callback( null, file );
     }
@@ -12,7 +13,8 @@ module.exports = function(options) {
     }
     var content = file.contents.toString();
     var str = content.replace(/((-?\d+)(\.\d+)?)px/ig, function($0, $1) {
-      return ($1 / rootPX) + 'rem'
+      var r = ($1 / rootPX).toFixed(accuracy);
+      return r + 'rem'
     });
     file.contents = new Buffer(str);
     return callback(null, file);
