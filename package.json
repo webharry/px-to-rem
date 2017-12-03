@@ -1,0 +1,22 @@
+{
+  "name": "px-to-rem",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/webharry/px-to-rem.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/webharry/px-to-rem/issues"
+  },
+  "homepage": "https://github.com/webharry/px-to-rem#readme",
+  "devDependencies": {
+    "through2": "^2.0.3"
+  }
+}
